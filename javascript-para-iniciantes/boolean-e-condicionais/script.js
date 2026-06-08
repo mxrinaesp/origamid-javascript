@@ -40,10 +40,10 @@ if (!true) {}; // false
 if (!1) {}; // false
 if (!undefined) {}; // true
 if (!'') {}; // true
-if (!!'') {}; // false
+if (!!'') {}; // false // las dos !! te dicen si la variable es true o false
 
 
-// Operdaores de comparação
+// Operadores de comparação
 10 == '10'; // true (más permisivo)
 10 == 10; // true
 10 === '10'; // false (muy estricta)
@@ -51,3 +51,45 @@ if (!!'') {}; // false
 10 != 15; //
 10 != '10'; // false
 10 !== '10'; // true
+
+
+// Operadores lógicos && y
+true && true; // true
+true && false; // false
+false && true; // false - si hay un falso, va a devolver falso sin mirar el resto de condiciones
+'Gato' && 'Cão'; // 'Cão'- va a devolver el último valor verdadero si ambos lo son
+(5 - 5) && (5 + 5); // 0 = false
+'Gato' && false; // false
+(5 >= 5) && (3 < 6); // true
+
+
+// Operadores lógicos || o
+true || true; // true
+true || false; // true
+false || true; // true 
+'Gato' || 'Cão'; // 'Gato' - va a decolver el primer verdadero que encuentre
+(5 - 5) || (5 + 5); // 10
+'Gato' || false; // 'Gato'
+(5 >= 5) || (3 < 6); // true
+
+
+// Switch
+var corFavorita = 'Amarelo';
+
+switch(corFavorita) {
+     case 'Azul':
+          console.log('Olhe para o céu.');
+          break;
+     case 'Vermelho':
+          console.log('Olhe para rosas.');
+          break;
+     case 'Amarelo':
+          console.log('Olhe para o sol.');
+          break;
+     case 'Verde':
+          console.log('Ole para a floresta.');
+          break;
+     default:
+          console.log('Feche os olhos');
+          break;
+}
